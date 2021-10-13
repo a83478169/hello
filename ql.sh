@@ -171,7 +171,7 @@ if [ "$pannel" = "2" ]; then
 fi
 
 # 端口问题
-modify_ql_port() {
+
     inp "是否修改青龙端口[默认 5700]：\n1) 修改\n2) 不修改[默认]"
     opt
     read change_ql_port
@@ -179,7 +179,7 @@ modify_ql_port() {
         echo -n -e "\e[36m输入您想修改的端口->\e[0m"
         read QL_PORT
     fi
-}
+
 
 if [ "$NETWORK" = "bridge" ]; then
     inp "是否映射端口：\n1) 映射[默认]\n2) 不映射"
