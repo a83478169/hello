@@ -1,3 +1,20 @@
+#!/usr/bin/env bash
+log() {
+    echo -e "\e[32m\n$1 \e[0m\n"
+}
+
+inp() {
+    echo -e "\e[33m\n$1 \e[0m\n"
+}
+
+opt() {
+    echo -n -e "\e[36m输入您的选择->\e[0m"
+}
+
+warn() {
+    echo -e "\e[31m$1 \e[0m\n"
+}
+
 inp "1、推送至腾讯云1-2；2、推送至腾讯云2-4；3、推送至华为云"
 opt
 read watchtower
