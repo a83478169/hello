@@ -18,6 +18,7 @@ warn() {
 inp "1、推送至腾讯云1-2；2、推送至腾讯云2-4；3、推送至华为云"
 opt
 read watchtower
+rm -rf ql.tar
 tar czvf ql.tar ql
 if [ "$watchtower" = "1" ]; then
     scp -r /root/ql.tar root@1.15.15.178:/root/ql.tar
