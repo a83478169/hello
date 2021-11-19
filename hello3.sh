@@ -14,9 +14,9 @@ echo "start copy datafile from remote path..." >> /home/import.log
 
 /usr/bin/expect <<EOF
 set timeout 10
-spawn scp -r -p $filepath1 root@1.15.15.178:/root/env1`date +%x%X`.sh
-spawn scp -r -p $filepath2 root@1.15.15.178:/root/env2`date +%x%X`.sh
-spawn scp -r -p $filepath3 root@1.15.15.178:/root/env3`date +%x%X`.sh
+spawn scp -r -p $filepath1 root@1.15.15.178:/root/env1`date "+%Y%m%d%H%M%S"`.sh
+spawn scp -r -p $filepath2 root@1.15.15.178:/root/env2`date "+%Y%m%d%H%M%S"`.sh
+spawn scp -r -p $filepath3 root@1.15.15.178:/root/env3`date "+%Y%m%d%H%M%S"`.sh
 expect {
  "(yes/no)?"
  {
